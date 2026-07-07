@@ -1,0 +1,403 @@
+/* =========================
+   RESET
+========================= */
+
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:'Poppins',sans-serif;
+    background:#0d0d0d;
+    color:#e5e5e5;
+}
+
+/* =========================
+   PALETA
+========================= */
+
+:root{
+    --dourado:#8d1f1f;
+    --vinho:#d63c3c;
+    --bege:#0d0d0d;
+    --marrom:#e5e5e5;
+}
+
+/* =========================
+   HEADER
+========================= */
+
+header{
+    position:fixed;
+    top:0;
+    width:100%;
+    z-index:1000;
+
+    background:rgba(10,10,10,.95);
+    backdrop-filter:blur(10px);
+
+    display:flex;
+    flex-direction:column;
+    align-items:center;
+
+    padding:15px 10px;
+
+    border-bottom:1px solid var(--dourado);
+}
+
+header h1{
+    font-family:'Cinzel',serif;
+    color:var(--vinho);
+    font-size:28px;
+}
+
+.subtitulo{
+    font-size:14px;
+    color:#b0b0b0;
+    letter-spacing:3px;
+    margin-top:2px;
+}
+
+nav{
+    margin-top:10px;
+}
+
+nav a{
+    text-decoration:none;
+    color:#d8d8d8;
+    margin:0 15px;
+    font-weight:500;
+    transition:.3s;
+}
+
+nav a:hover{
+    color:var(--vinho);
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    height:100vh;
+    display:flex;
+    align-items:center;
+    justify-content:center;
+    position:relative;
+    margin-top:90px;
+
+    background:
+    linear-gradient(rgba(0,0,0,.55),rgba(0,0,0,.55)),
+    url("https://static.wikia.nocookie.net/ordemparanormal/images/9/9e/Enigma_do_Medo_-_Capa.jpeg/revision/latest?cb=20241211170724&path-prefix=pt-br");
+
+    background-size:cover;
+    background-position:center;
+}
+
+.overlay{
+    background:rgba(8,8,8,.78);
+    backdrop-filter:blur(8px);
+
+    padding:40px;
+    border-radius:25px;
+
+    border:1px solid rgba(214,60,60,.35);
+
+    box-shadow:0 20px 50px rgba(0,0,0,.65);
+
+    max-width:700px;
+    text-align:center;
+    color:white;
+}
+
+.overlay h2{
+    font-family:'Cinzel',serif;
+    font-size:48px;
+    margin-bottom:20px;
+}
+
+.overlay p{
+    font-size:18px;
+    line-height:1.8;
+    margin-bottom:30px;
+}
+
+.overlay button{
+    padding:14px 35px;
+    border:none;
+    border-radius:40px;
+    background:var(--dourado);
+    color:white;
+    font-size:16px;
+    cursor:pointer;
+    transition:.3s;
+}
+
+.overlay button:hover{
+    background:var(--vinho);
+    transform:translateY(-5px);
+}
+
+/* =========================
+   SEÇÕES
+========================= */
+
+section{
+    padding:90px 10%;
+}
+
+.titulo{
+    font-family:'Cinzel',serif;
+    font-size:38px;
+    text-align:center;
+    margin-bottom:50px;
+    color:var(--vinho);
+}
+
+/* =========================
+   HISTÓRIA
+========================= */
+
+.historia{
+    display:flex;
+    align-items:center;
+    gap:50px;
+}
+
+.historia .texto{
+    flex:1;
+}
+
+.historia .texto p{
+    font-family:'Cormorant Garamond',serif;
+    font-size:26px;
+    line-height:1.8;
+}
+
+.historia .imagem{
+    flex:1;
+}
+
+.historia img{
+    width:100%;
+    border-radius:20px;
+    box-shadow:0 15px 35px rgba(0,0,0,.45);
+}
+
+/* =========================
+   PERSONAGENS
+========================= */
+
+.cards{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(260px,1fr));
+    gap:30px;
+}
+
+.card{
+    background:#181818;
+    border:2px solid var(--dourado);
+    border-radius:22px;
+    overflow:hidden;
+    text-align:center;
+    box-shadow:0 10px 25px rgba(0,0,0,.45);
+    transition:.4s;
+}
+
+.card:hover{
+    transform:translateY(-10px);
+    box-shadow:0 18px 35px rgba(214,60,60,.25);
+}
+
+.card img{
+    width:100%;
+    height:360px;
+    object-fit:cover;
+    transition:.4s;
+}
+
+.card h3{
+    font-family:'Cinzel',serif;
+    margin:15px 0 10px;
+    color:var(--vinho);
+}
+
+.card p{
+    padding:0 15px 25px;
+    font-size:16px;
+    line-height:1.6;
+    color:#d7d7d7;
+}
+
+/* =========================
+   GALERIA
+========================= */
+
+.galeria{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(220px,1fr));
+    gap:20px;
+}
+
+.galeria img{
+    width:100%;
+    height:220px;
+    object-fit:cover;
+    border-radius:18px;
+    transition:.4s;
+}
+
+.galeria img:hover{
+    transform:scale(1.05);
+    box-shadow:0 15px 30px rgba(214,60,60,.45);
+}
+
+/* =========================
+   CURIOSIDADES
+========================= */
+
+.curiosidades{
+    background:#121212;
+    border-top:2px solid var(--dourado);
+    border-bottom:2px solid var(--dourado);
+}
+
+.curiosidades h2{
+    font-family:'Cinzel',serif;
+    font-size:38px;
+    text-align:center;
+    margin-bottom:50px;
+    color:var(--vinho);
+}
+
+.lista{
+    display:grid;
+    grid-template-columns:repeat(auto-fit,minmax(250px,1fr));
+    gap:25px;
+}
+
+.lista div{
+    background:#1b1b1b;
+    padding:25px;
+    border-radius:20px;
+    border:1px solid #333;
+    text-align:center;
+    transition:.3s;
+    box-shadow:0 8px 20px rgba(0,0,0,.4);
+}
+
+.lista div:hover{
+    transform:translateY(-5px);
+    border-color:var(--vinho);
+}
+
+.lista h3{
+    font-family:'Cinzel',serif;
+    margin-bottom:10px;
+    color:var(--vinho);
+}
+
+.lista p{
+    color:#d6d6d6;
+    line-height:1.6;
+}
+
+/* =========================
+   FOOTER
+========================= */
+
+footer{
+    background:#080808;
+    color:#e5e5e5;
+    text-align:center;
+    padding:40px 20px;
+    border-top:2px solid var(--dourado);
+}
+
+footer h2{
+    font-family:'Cinzel',serif;
+    margin-bottom:10px;
+    color:var(--vinho);
+}
+
+footer p{
+    color:#b0b0b0;
+}
+
+/* =========================
+   AJUSTE DE IMAGENS
+========================= */
+
+.img-rosto-alto{
+    object-position:50% 20%;
+}
+
+/* =========================
+   AJUSTE DOS PERSONAGENS
+========================= */
+
+.miaomiao{
+    object-position:50% 18%;
+}
+
+.musheng{
+    object-position:50% 8%;
+}
+
+.muyao{
+    object-position:50% 15%;
+}
+
+.liufuyi{
+    object-position:50% 12%;
+}
+
+/* =========================
+   RESPONSIVO
+========================= */
+
+@media(max-width:900px){
+
+    header h1{
+        font-size:22px;
+    }
+
+    nav a{
+        margin:0 10px;
+        font-size:14px;
+    }
+
+    .hero{
+        height:90vh;
+    }
+
+    .overlay{
+        padding:25px;
+    }
+
+    .overlay h2{
+        font-size:34px;
+    }
+
+    .overlay p{
+        font-size:16px;
+    }
+
+    .historia{
+        flex-direction:column;
+    }
+
+    .historia .texto p{
+        font-size:22px;
+    }
+
+    section{
+        padding:70px 8%;
+    }
+}
